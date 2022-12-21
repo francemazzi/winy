@@ -10,6 +10,17 @@ npm run dev
 yarn dev
 ```
 
+## Il primo marketplace di NFT per collezionisti di vino 🍷
+
+La piattaforma permette di fotografare e creare una identità digitale alle bottiglie si possiedono.
+Questo permette ai produttori e a tutti coloro sono inseriti nella lista per caricare nft di pubblicare non fungible token.
+
+# TODO
+
+- Testare logica add item e create... al momento hanno un bug
+- Sviluppare checkout
+- Sistemare homepage e design
+
 Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
 
 You can start editing the page by modifying `pages/index.tsx`. The page auto-updates as you edit the file.
