@@ -71,12 +71,15 @@ const ListingPage = () => {
 
   //controllo variazioni componente e prezzo
   useEffect(() => {
-    if (!listingId || !listing || !contract) return;
+    if (!listingId || !listing || !contract) {
+      return;
+    }
     if (listing.type === ListingType.Auction) {
       //settare con nuovi dati scaricati da blockchain
       fetchMinNextBid();
     }
-  }, [listingId, listing, contract]);
+  });
+  //, [listingId, listing, contract]
 
   const fetchMinNextBid = async () => {
     if (!listingId || !contract) return;
