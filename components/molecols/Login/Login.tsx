@@ -27,16 +27,11 @@ const Login: React.FC = () => {
 
   return (
     <div className="w-full flex lg:flex-row sm:flex-col content-center">
-      <div>
-        <Link href={"/marketplace"}>
-          <button>Vicino</button>
-        </Link>
-      </div>
       {username && (
         <div>
           {userData.producer ? (
             <div className="flex lg:flex-row sm:flex-col">
-              <Link href={"/admin"}>
+              <Link href={"/addItem"}>
                 <button className=" ml-[10px] mr-[10px]">
                   Carica prodotto
                 </button>
@@ -56,25 +51,8 @@ const Login: React.FC = () => {
           ) : (
             <div className="flex lg:flex-row sm:flex-col">
               <div>
-                <Link href={`/`}>
-                  <button className=" ml-[10px] mr-[10px]">
-                    I tuoi pre-ordini
-                  </button>
-                </Link>
-              </div>
-              <div>
-                <Link href={`/`}>
+                <Link href={`/enter`}>
                   <div>Profilo</div>
-                  {/* prossima feature inserire immagine profilo */}
-                  {/* <div className="relative h-[5px] cursor-pointer rounded-[10px] bg-slate-100 md:h-[10px] xl:h-[10px]">
-                  <Image
-                    className=" ml-[10px] mr-[10px]"
-                    src={PROFILE_PHOTO}
-                    alt="no-image"
-                    objectFit="cover"
-                    layout="fill"
-                  />
-                </div> */}
                 </Link>
               </div>
             </div>
@@ -85,45 +63,17 @@ const Login: React.FC = () => {
         <div>
           {userData.producer ? (
             <div className="flex lg:flex-row sm:flex-col">
-              <Link href={"/admin"}>
+              <Link href={"/addItem"}>
                 <button className=" ml-[10px] mr-[10px]">
                   Carica prodotto
                 </button>
-              </Link>
-              <Link href={`/`}>
-                <div className="relative aspect-1 h-[20px] w-full cursor-pointer rounded-[10px] bg-slate-100 md:h-[543px] xl:h-[590px]">
-                  <Image
-                    className=" ml-[10px] mr-[10px]"
-                    src={PROFILE_PHOTO}
-                    alt="no-image"
-                    objectFit="cover"
-                    layout="fill"
-                  />
-                </div>
               </Link>
             </div>
           ) : (
             <div className="flex lg:flex-row sm:flex-col">
               <div>
                 <Link href={`/`}>
-                  <button className=" ml-[10px] mr-[10px]">
-                    I tuoi pre-ordini
-                  </button>
-                </Link>
-              </div>
-              <div>
-                <Link href={`/`}>
                   <div>Profilo</div>
-                  {/* prossima feature inserire immagine profilo */}
-                  {/* <div className="relative h-[5px] cursor-pointer rounded-[10px] bg-slate-100 md:h-[10px] xl:h-[10px]">
-                  <Image
-                    className=" ml-[10px] mr-[10px]"
-                    src={PROFILE_PHOTO}
-                    alt="no-image"
-                    objectFit="cover"
-                    layout="fill"
-                  />
-                </div> */}
                 </Link>
               </div>
             </div>

@@ -87,11 +87,8 @@ const ProductCardNFT: React.FC<cardTypeNFT> = ({
             </div>
             {/* Prezzo - quantità */}
             <div className="flex flex-row items-center py-[5px] ">
-              <div className="mr-[1px]">{prezzo} €</div>
-              <div>
-                per {portate} prozion
-                {portate ? (+portate > 1 ? "i" : "e") : "e"}
-              </div>
+              <p>Valore: </p>
+              <p className="ml-[5px]">{prezzo} €</p>
             </div>
           </div>
         </Link>

@@ -45,10 +45,8 @@ const Home = () => {
           Scopri i nuovi prodotti
         </div>
         <div className="bg-[white]">
-          <ProductList scrollMode="overflow-x-scroll" />
-        </div>
-        <div>
-          <div></div>
+          {/* <ProductList scrollMode="overflow-x-scroll" /> */}
+          <ProductListNFT scrollMode="overflow-x-scroll" />
         </div>
       </div>
       <div className="my-[15px]">

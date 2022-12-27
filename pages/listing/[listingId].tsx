@@ -212,7 +212,7 @@ const ListingPage = () => {
 
   return (
     <div className="flex flex-col lg:flex-row  mac-w-6xl mx-auto p-2">
-      <div className="w-full md:h-[20rem] md:w-[20rem] lg:h-[20rem] lg:w-[50rem] lg:mr-[20px] rounded-t-md ">
+      <div className="w-full md:h-[20rem] md:w-[20rem] lg:h-[20rem] lg:w-[50rem] lg:mr-[20px] rounded-t-md">
         <MediaRenderer
           src={listing?.asset.image}
           className="rounded-md object-cover shadow-lg"

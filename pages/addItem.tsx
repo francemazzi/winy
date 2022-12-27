@@ -79,7 +79,7 @@ const AddItem = () => {
         <div className="flex flex-col justify-center items-center md:flex-row lg:flex-row md:justify-around lg:justify-around">
           <Image
             className="object-contain shadow-md rounded-md "
-            src={preview || "/img/bagelPain.jpg"}
+            src={preview || "/img/bottlesWine.jpg"}
             alt="img"
             width={250}
             height={250}

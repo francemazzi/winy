@@ -3,7 +3,6 @@ import ProductCard from "../ProductCard";
 import { PRODOTTI } from "../../../common/costants";
 import Link from "next/link";
 import Loader from "../../atoms/loader/Loader";
-import { cardTypeNFT } from "../../../common/types";
 //loading foto
 import loadingFoto from "../../../public/img/loading.png";
 //web3
