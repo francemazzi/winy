@@ -17,7 +17,7 @@ import {
   NATIVE_TOKENS,
   NATIVE_TOKEN_ADDRESS,
 } from "@thirdweb-dev/sdk";
-import { chain } from "wagmi-core";
+// import { chain } from "wagmi-core";
 import network from "../utils/network";
 
 const Create = () => {
