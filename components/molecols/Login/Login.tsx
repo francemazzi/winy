@@ -56,7 +56,7 @@ const Login: React.FC = () => {
           ) : (
             <div className="flex lg:flex-row sm:flex-col">
               <div>
-                <Link href={`/${Admin}`}>
+                <Link href={`/`}>
                   <button className=" ml-[10px] mr-[10px]">
                     I tuoi pre-ordini
                   </button>

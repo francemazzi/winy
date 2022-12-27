@@ -58,6 +58,7 @@ const AddItem = () => {
       const tokenId = transactionTx.id;
       const nft = transactionTx.data();
       console.log(receipt, tokenId, nft);
+
       // ritornare a pagine che si preferisce
       router.push("/create");
     } catch (error) {
@@ -96,17 +97,18 @@ const AddItem = () => {
               id="name"
             />
             <label>Description del prodotto</label>
-            <textarea
+            <input
               className="formField"
+              type="text"
               placeholder="Inserisci qui la descrizione..."
               id="Description"
             />
 
-            <label>Annata del prodotto</label>
+            <label>Ingredient del prodotto</label>
             <input
               className="formField"
               type="text"
-              placeholder="Inserisci qui l'annata..."
+              placeholder="Inserisci qui gli ingredienti..."
               id="Ingredient"
             />
             <label>Abbinamenti del prodotto</label>

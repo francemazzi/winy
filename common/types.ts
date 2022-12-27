@@ -26,6 +26,7 @@ export type cardTypeNFT = {
   prezzo?: string;
   portate?: string;
   linkPage?: string;
+  listing?: string;
 };
 
 export type productPageType = {
@@ -42,4 +43,5 @@ export type buttonType = {
   textColor: string;
   color: string;
   colorHover: string;
+  onClick?: () => void;
 };

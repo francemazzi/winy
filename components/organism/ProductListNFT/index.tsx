@@ -3,6 +3,7 @@ import ProductCard from "../ProductCard";
 import { PRODOTTI } from "../../../common/costants";
 import Link from "next/link";
 import Loader from "../../atoms/loader/Loader";
+import { cardTypeNFT } from "../../../common/types";
 //loading foto
 import loadingFoto from "../../../public/img/loading.png";
 //web3
@@ -29,7 +30,9 @@ const ProductListNFT: React.FC<TProductList> = ({ scrollMode, justify }) => {
     useActiveListings(contract);
 
   return (
-    <div className={`flex flex-row items-center ${justify} ${scrollMode}`}>
+    <div
+      className={`flex flex-row my-[10px] items-center ${justify} ${scrollMode}`}
+    >
       {loadingListing ? (
         <div>
           <Loader show={true} />
@@ -43,6 +46,7 @@ const ProductListNFT: React.FC<TProductList> = ({ scrollMode, justify }) => {
                   foto={listing ? listing.asset.image : loadingFoto}
                   titolo={listing.asset.name}
                   prezzo={listing.buyoutCurrencyValuePerToken.displayValue}
+                  listing={listing.id}
                 />
               </div>
             );
