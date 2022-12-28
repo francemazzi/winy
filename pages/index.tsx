@@ -14,6 +14,7 @@ import {
   useActiveListings,
 } from "@thirdweb-dev/react";
 import ProductListNFT from "../components/organism/ProductListNFT";
+import ProductListNewNFT from "../components/organism/ProductListNewNFT";
 
 const Home = () => {
   const { contract } = useContract(
@@ -46,7 +47,7 @@ const Home = () => {
         </div>
         <div className="bg-[white]">
           {/* <ProductList scrollMode="overflow-x-scroll" /> */}
-          <ProductListNFT scrollMode="overflow-x-scroll" />
+          <ProductListNewNFT scrollMode="overflow-x-scroll" />
         </div>
       </div>
       <div className="my-[15px]">
