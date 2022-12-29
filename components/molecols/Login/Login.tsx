@@ -72,7 +72,7 @@ const Login: React.FC = () => {
           ) : (
             <div className="flex lg:flex-row sm:flex-col">
               <div>
-                <Link href={`/`}>
+                <Link href={`/enter`}>
                   <div>Profilo</div>
                 </Link>
               </div>
@@ -80,7 +80,7 @@ const Login: React.FC = () => {
           )}
         </div>
       )}
-      {(!username || !address) && (
+      {!address && (
         <div>
           <Link href={"/enter"}>
             <button className=" ml-[10px] mr-[10px]">Accedi</button>

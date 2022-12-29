@@ -29,6 +29,10 @@ const Home = () => {
 
   return (
     <div className="m-[10px]">
+      <Head>
+        <title>Winy - Guadagna bevendo</title>
+        <link rel="icon" href="/favicon.ico" />
+      </Head>
       <div className="flex flex-col justify-center items-center p-[20px] h-[20rem] rounded-lg shadow-xl relative">
         <Image
           src={"/img/glassesWine.jpg"}

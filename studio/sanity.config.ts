@@ -7,7 +7,7 @@ export default defineConfig({
   name: 'default',
   title: 'winy',
 
-  projectId: 'hze3jous',
+  projectId: 'riyu2i5m',
   dataset: 'production',
 
   plugins: [deskTool(), visionTool()],

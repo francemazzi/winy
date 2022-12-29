@@ -1,6 +1,8 @@
 import React, { useState } from "react";
 import { TEST_OFFLINE_NAVBAR } from "../../../common/costants";
 import Login from "../Login/Login";
+//wallet connection
+import { useAddress, useDisconnect, useMetamask } from "@thirdweb-dev/react";
 
 interface burgerMenu {
   onClick: () => void;
