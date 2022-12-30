@@ -6,6 +6,10 @@ import Loader from "../components/atoms/loader/Loader";
 import CategoryBar from "../components/organism/CategoryBar";
 import ProductList from "../components/organism/ProductList";
 import Reasearch from "../components/atoms/Reasearch";
+import { GetServerSideProps } from "next";
+//sanity db
+import { sanityClient } from "../sanity";
+
 //eth network
 import {
   ChainId,
@@ -15,8 +19,19 @@ import {
 } from "@thirdweb-dev/react";
 import ProductListNFT from "../components/organism/ProductListNFT";
 import ProductListNewNFT from "../components/organism/ProductListNewNFT";
+import Button from "../components/atoms/Button";
+import { useRouter } from "next/router";
+import sanityCli from "../studio/sanity.cli";
 
+//Props per sanity
+//TODO -> sistemare importazione dati
 const Home = () => {
+  //TODO
+  //test sanity
+  // console.log(marketItems)
+
+  //router
+  const router = useRouter();
   const { contract } = useContract(
     process.env.NEXT_PUBLIC_MARKETPLACE_CONTRACT,
     "marketplace"
@@ -44,6 +59,15 @@ const Home = () => {
         <div className="text-[22px] font-bold text-[white] bg-[#a59f9f4b] p-[10px] drop-shadow-[0_35px_60px_-15px_rgba(0,0,0,0.5)] rounded-lg relative">
           Acquista il vino e guadagna con la sua identità
         </div>
+
+        <Button
+          text="Esplora"
+          color="white"
+          textColor="black"
+          colorHover="#a59f9f4b"
+          pageLinkRouter={"/marketplace"}
+          relative={"relative"}
+        />
       </div>
       <div className="my-[15px]">
         <div className="text-[19px] font-semibold ">
@@ -69,6 +93,27 @@ const Home = () => {
       {/* <Loader show={true} /> */}
     </div>
   );
+};
+
+//TODO -> da rifare
+export const getServerSideProps = async () => {
+  const query = '* [ _type == "marketItems" ';
+  const marketItems = await sanityClient.fetch(query);
+
+  console.log(marketItems);
+  if (!marketItems.lenght) {
+    return {
+      props: {
+        marketItems: [],
+      },
+    };
+  } else {
+    return {
+      props: {
+        marketItems,
+      },
+    };
+  }
 };
 
 export default Home;

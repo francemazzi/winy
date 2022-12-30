@@ -39,6 +39,8 @@ export type productPageType = {
 };
 
 export type buttonType = {
+  relative?: string;
+  pageLinkRouter?: string;
   text: string;
   textColor: string;
   color: string;

@@ -1,12 +1,28 @@
-import React from "react";
+import React, { useEffect } from "react";
 import { useContext } from "react";
 //wallet connection
 import { useAddress, useDisconnect, useMetamask } from "@thirdweb-dev/react";
+import { client } from "../lib/sanityClient";
 
 type Props = {};
 
 export default function Enter() {
   const address = useAddress();
+
+  //sanity db connection address
+  //TODO -> fix this !
+  // useEffect(() => {
+  //   if (!address) return;
+  //   (async () => {
+  //     const userDoc = {
+  //       _type: "users",
+  //       _id: address,
+  //       userName: "Unnamed",
+  //       walletAddress: address,
+  //     };
+  //     const result = await client.createIfNotExists(userDoc);
+  //   })();
+  // }, [address]);
 
   return (
     <div>
