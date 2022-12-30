@@ -43,7 +43,7 @@ const Home = ({ marketItems }: Props) => {
   const { data: listings, isLoading: loadingListing } =
     useActiveListings(contract);
 
-  // console.log(listings);
+  console.log(listings);
 
   return (
     <div className="m-[10px]">

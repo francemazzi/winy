@@ -57,10 +57,3 @@ const ProductListNFT: React.FC<TProductList> = ({ scrollMode, justify }) => {
 };
 
 export default ProductListNFT;
-
-//   titolo,
-//   produttore,
-//   categoria,
-//   prezzo,
-//   portate,
-//   linkPage,

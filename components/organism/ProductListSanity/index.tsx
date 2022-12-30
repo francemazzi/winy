@@ -25,7 +25,7 @@ interface TProductList {
   marketItems: Collection[];
 }
 
-const ProductListNFT: React.FC<TProductList> = ({
+const ProductListSanity: React.FC<TProductList> = ({
   scrollMode,
   justify,
   marketItems,
@@ -81,4 +81,4 @@ const ProductListNFT: React.FC<TProductList> = ({
 //   }
 // };
 
-export default ProductListNFT;
+export default ProductListSanity;
