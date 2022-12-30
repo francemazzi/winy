@@ -82,7 +82,7 @@ export default {
     {
       name: 'id',
       title: 'ID',
-      type: 'number',
+      type: 'string',
     },
   ],
 }

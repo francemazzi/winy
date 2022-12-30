@@ -7,6 +7,7 @@ import CategoryBar from "../components/organism/CategoryBar";
 import ProductList from "../components/organism/ProductList";
 import Reasearch from "../components/atoms/Reasearch";
 import { GetServerSideProps } from "next";
+import { Collection } from "../common/types";
 //sanity db
 import { sanityClient } from "../sanity";
 
@@ -21,14 +22,16 @@ import ProductListNFT from "../components/organism/ProductListNFT";
 import ProductListNewNFT from "../components/organism/ProductListNewNFT";
 import Button from "../components/atoms/Button";
 import { useRouter } from "next/router";
-import sanityCli from "../studio/sanity.cli";
+import ProductListSanity from "../components/organism/ProductListSanity";
 
 //Props per sanity
-//TODO -> sistemare importazione dati
-const Home = () => {
+interface Props {
+  marketItems: Collection[];
+}
+const Home = ({ marketItems }: Props) => {
   //TODO
   //test sanity
-  // console.log(marketItems)
+  console.log(marketItems);
 
   //router
   const router = useRouter();
@@ -40,7 +43,7 @@ const Home = () => {
   const { data: listings, isLoading: loadingListing } =
     useActiveListings(contract);
 
-  console.log(listings);
+  // console.log(listings);
 
   return (
     <div className="m-[10px]">
@@ -90,18 +93,20 @@ const Home = () => {
         </h2>
         <ProductListNFT />
       </div>
-      {/* <Loader show={true} /> */}
+      <div className="my-[15px]">
+        <h2 className="text-[19px] font-semibold text-cyan-700">Le novità</h2>
+
+        <ProductListSanity marketItems={marketItems} />
+      </div>
     </div>
   );
 };
 
-//TODO -> da rifare
-export const getServerSideProps = async () => {
-  const query = '* [ _type == "marketItems" ';
+export const getServerSideProps: GetServerSideProps = async () => {
+  const query = '* [ _type == "marketItems"]';
   const marketItems = await sanityClient.fetch(query);
 
-  console.log(marketItems);
-  if (!marketItems.lenght) {
+  if (!marketItems.length) {
     return {
       props: {
         marketItems: [],

@@ -47,3 +47,41 @@ export type buttonType = {
   colorHover: string;
   onClick?: () => void;
 };
+
+//sanity db
+interface Image {
+  asset: {
+    url: string;
+  };
+}
+
+interface RadioObj {
+  category: {
+    title: string;
+    value: string;
+  };
+}
+
+interface CategoryList {
+  list: RadioObj[];
+}
+
+export interface Collection {
+  title: string;
+  contractAddress: string;
+  categoryType: CategoryList;
+  description: string;
+  yearsOld: number;
+  createdBy: string;
+  volumeTraded: number;
+  floorPrice: number;
+  owners: [];
+  profileImage: Image;
+  bannerImage: Image;
+  slug: {
+    source: string;
+  };
+  id: string;
+}
+
+export interface Creator {}
