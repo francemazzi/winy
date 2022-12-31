@@ -16,3 +16,14 @@ export default defineConfig({
     types: schemaTypes,
   },
 })
+//TODO -> se da errore devi aggiungere file come quello eliminato
+//File nome -> sanity.cli.ts
+//dentro:
+// import {defineCliConfig} from 'sanity/cli'
+
+// export default defineCliConfig({
+//   api: {
+//     projectId: 'riyu2i5m',
+//     dataset: 'production'
+//   }
+// })

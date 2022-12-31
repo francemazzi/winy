@@ -84,4 +84,11 @@ export interface Collection {
   id: string;
 }
 
-export interface Creator {}
+export interface Creator {
+  userName: string;
+  walletAddress: string;
+  profileImage: Image;
+  bannerImage: Image;
+  twitterHandle: string;
+  igHandle: string;
+}

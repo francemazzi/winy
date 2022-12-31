@@ -3,6 +3,7 @@ import { useContext } from "react";
 //wallet connection
 import { useAddress, useDisconnect, useMetamask } from "@thirdweb-dev/react";
 import { client } from "../lib/sanityClient";
+import { Creator } from "../common/types";
 
 type Props = {};
 
