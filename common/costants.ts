@@ -5,7 +5,6 @@ export const TEST_OFFLINE_NAVBAR = [
     link: [
       { name: "Manifesto", href: "/aboutus" },
       { name: "Ordina ora", href: "/marketplace" },
-      { name: "Balance 👛", href: "/enter" },
       // { name: "Registrati", href: "/registrati" },
       // { name: "Login", href: "/login" },
     ],

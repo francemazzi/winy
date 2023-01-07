@@ -17,7 +17,7 @@ import {
   NATIVE_TOKENS,
   NATIVE_TOKEN_ADDRESS,
 } from "@thirdweb-dev/sdk";
-// import { chain } from "wagmi-core";
+import { chain } from "wagmi-core";
 import network from "../utils/network";
 
 const Create = () => {
@@ -150,7 +150,7 @@ const Create = () => {
                 onClick={() => setSelectNFT(nft)}
               >
                 <MediaRenderer
-                  className="h-15 w-full rounded-md"
+                  className="h-20 w-full"
                   src={nft.metadata.image}
                 />
                 <h3 className="text-[18px] font-semibold">

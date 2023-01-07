@@ -29,9 +29,7 @@ const ProductListNFT: React.FC<TProductList> = ({ scrollMode, justify }) => {
     useActiveListings(contract);
 
   return (
-    <div
-      className={`flex flex-row my-[10px] items-center ${justify} ${scrollMode}`}
-    >
+    <div className={`flex flex-row items-center ${justify} ${scrollMode}`}>
       {loadingListing ? (
         <div>
           <Loader show={true} />
@@ -45,7 +43,6 @@ const ProductListNFT: React.FC<TProductList> = ({ scrollMode, justify }) => {
                   foto={listing ? listing.asset.image : loadingFoto}
                   titolo={listing.asset.name}
                   prezzo={listing.buyoutCurrencyValuePerToken.displayValue}
-                  listing={listing.id}
                 />
               </div>
             );
@@ -57,3 +54,10 @@ const ProductListNFT: React.FC<TProductList> = ({ scrollMode, justify }) => {
 };
 
 export default ProductListNFT;
+
+//   titolo,
+//   produttore,
+//   categoria,
+//   prezzo,
+//   portate,
+//   linkPage,

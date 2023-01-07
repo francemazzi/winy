@@ -58,7 +58,6 @@ const AddItem = () => {
       const tokenId = transactionTx.id;
       const nft = transactionTx.data();
       console.log(receipt, tokenId, nft);
-
       // ritornare a pagine che si preferisce
       router.push("/create");
     } catch (error) {
@@ -79,7 +78,7 @@ const AddItem = () => {
         <div className="flex flex-col justify-center items-center md:flex-row lg:flex-row md:justify-around lg:justify-around">
           <Image
             className="object-contain shadow-md rounded-md "
-            src={preview || "/img/bottlesWine.jpg"}
+            src={preview || "/img/bagelPain.jpg"}
             alt="img"
             width={250}
             height={250}
@@ -97,18 +96,17 @@ const AddItem = () => {
               id="name"
             />
             <label>Description del prodotto</label>
-            <input
+            <textarea
               className="formField"
-              type="text"
               placeholder="Inserisci qui la descrizione..."
               id="Description"
             />
 
-            <label>Ingredient del prodotto</label>
+            <label>Annata del prodotto</label>
             <input
               className="formField"
               type="text"
-              placeholder="Inserisci qui gli ingredienti..."
+              placeholder="Inserisci qui l'annata..."
               id="Ingredient"
             />
             <label>Abbinamenti del prodotto</label>
